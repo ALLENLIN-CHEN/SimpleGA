@@ -23,11 +23,14 @@ def cumsum(fit_value):
 
 
 def selection(pop, fit_value):
+	print pop
 	newfit_value = []
-	# 适应度总和
 	total_fit = sum(fit_value)
 	for i in range(len(fit_value)):
-		newfit_value.append(fit_value[i] / total_fit)
+		if total_fit == 0 :
+			newfit_value.append(total_fit)
+		else:
+		    newfit_value.append(fit_value[i] / total_fit)
 	# 计算累计概率
 	cumsum(newfit_value)
 	ms = []
@@ -46,6 +49,7 @@ def selection(pop, fit_value):
 		else:
 			fitin = fitin + 1
 	pop = newpop
+	print pop
 
 if __name__ == '__main__':
     pass

@@ -2,8 +2,10 @@
 
 # 淘汰（去除负值）
 
+#计算适应值,这里的适应值即是obj_value
 
 def calfitValue(obj_value):
+    """
     fit_value = []
     c_min = 0
     for i in range(len(obj_value)):
@@ -12,6 +14,8 @@ def calfitValue(obj_value):
         else:
             temp = 0.0
         fit_value.append(temp)
+    """
+    fit_value = obj_value
     return fit_value
 
 if __name__ == '__main__':

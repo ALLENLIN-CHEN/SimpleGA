@@ -1,16 +1,16 @@
 # 0.0 coding:utf-8 0.0
 import random
 
-
+#生成500个个体，每个个体基因数目为10
 def geneEncoding(pop_size, chrom_length):
     pop = [[]]
     for i in range(pop_size):
         temp = []
         for j in range(chrom_length):
-            temp.append(random.randint(0, 1))
+            temp.append(random.randint(0, 1)) #二进制编码
         pop.append(temp)
 
-    return pop[1:]
+    return pop[1:]  #返回pop中的第二个temp到最后一个temp
 
 
 if __name__ == '__main__':
